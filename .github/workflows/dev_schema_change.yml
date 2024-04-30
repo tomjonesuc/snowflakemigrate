@@ -34,7 +34,7 @@ jobs:
           SF_DATABASE: ${{ secrets.SF_DEV_DATABASE }}
           SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
         run: |
-          echo "GITHUB_WORKSPACE: ${github.workspace}"
+          echo "GGITHUB REPOSITORY ${github.repository}"
           echo "GITHUB REPOSITORY: ${github.repository}"
           python --version
           echo "Step 1: Installing schemachange"
