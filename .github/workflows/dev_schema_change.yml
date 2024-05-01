@@ -6,7 +6,7 @@ on:
     branches:
       - dev
     paths:
-      - 'migrate/**'
+      - 'migrations/**'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -34,7 +34,7 @@ jobs:
           SF_DATABASE: ${{ secrets.SF_DEV_DATABASE }}
           SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
         run: |
-          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          echo "GITHUB_WORKSPACE: ${github.workspace}"
           python --version
           echo "Step 1: Installing schemachange"
           pip install schemachange
